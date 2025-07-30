@@ -2,7 +2,7 @@ let itemBag;
 onLoad()
 
 function onLoad() {
-    let bagItemStr = localStorage.getItem('bagItems');
+    let bagItemStr = localStorage.getItem('itemBag');
     itemBag = bagItemStr ? JSON.parse(bagItemStr) : [];
     diplayBagIcon();
     displayItemOnHomapage();
@@ -17,6 +17,9 @@ function onLoad() {
 
  function diplayBagIcon() {
     let bagItemCountelement = document.querySelector(".bag-item-count");
+    if (!bagItemCountelement) {
+        return true;
+    }
     if (itemBag.length > 0) {
         bagItemCountelement.style.visibility = 'visible';
     bagItemCountelement.innerText = itemBag.length;
