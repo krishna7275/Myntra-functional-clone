@@ -1,7 +1,7 @@
 function onLoad(){
 displayBagItems();
 }
-
+// kuch nhi
 function displayBagItems() {
 let containerElement = document.getElementById("bag-items-container");
 containerElement.innerHTML = `<div class="bag-item-container">
